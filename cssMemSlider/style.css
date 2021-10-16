@@ -39,6 +39,7 @@ ul li {
 
 input[name="slides"] {
   grid-area: images;
+  opacity: 0;
 }
 
 .images {
@@ -50,7 +51,8 @@ input[name="slides"] {
 .images__item {
   grid-area: item;
   line-height: 0;
-  visibility: hidden;
+  opacity: 0;
+  transform: translateX(30%);
 }
 
 .images__item img {
@@ -111,19 +113,27 @@ input[name="slides"] {
 }
 
 #slide-1:checked ~ .images .images__item:nth-child(1) {
-  visibility: visible;
+  opacity: 1;
+  transition: transform 0.5s, opacity 0.5s;
+  transform: none;
 }
 
 #slide-2:checked ~ .images .images__item:nth-child(2) {
-  visibility: visible;
+  opacity: 1;
+  transition: transform 0.5s, opacity 0.5s;
+  transform: none;
 }
 
 #slide-3:checked ~ .images .images__item:nth-child(3) {
-  visibility: visible;
+  opacity: 1;
+  transition: transform 0.5s, opacity 0.5s;
+  transform: none;
 }
 
 #slide-4:checked ~ .images .images__item:nth-child(4) {
-  visibility: visible;
+  opacity: 1;
+  transition: transform 0.5s, opacity 0.5s;
+  transform: none;
 }
 
 #slide-1:checked ~ .titles .titles__item:nth-child(1) {
