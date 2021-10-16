@@ -189,3 +189,36 @@ input[name="slides"] {
 #slide-4:checked ~ .controls .controls__bullet:nth-child(4) span {
   background-color: transparent;
 }
+
+@media (max-width: 800px) {
+  .container {
+    grid-template-areas:
+      "images images"
+      "controls controls"
+      "titles titles";
+  }
+
+  .controls {
+    justify-content: center;
+  }
+
+  .titles__item {
+    transform: translateX(30%);
+  }
+
+  #slide-1:checked ~ .controls .controls__bullet:nth-child(1) span {
+    border-color: #fff;
+  }
+
+  #slide-2:checked ~ .controls .controls__bullet:nth-child(2) span {
+    border-color: #fff;
+  }
+
+  #slide-3:checked ~ .controls .controls__bullet:nth-child(3) span {
+    border-color: #fff;
+  }
+
+  #slide-4:checked ~ .controls .controls__bullet:nth-child(4) span {
+    border-color: #fff;
+  }
+}
