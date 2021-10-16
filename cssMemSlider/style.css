@@ -34,7 +34,7 @@ ul li {
   grid-template-areas:
     "images images"
     "titles controls";
-  row-gap: 1.5rem;
+  row-gap: 1rem;
 }
 
 input[name="slides"] {
@@ -63,6 +63,7 @@ input[name="slides"] {
 .titles {
   grid-area: titles;
   display: grid;
+  align-self: center;
   grid-template-areas: "item";
 }
 
@@ -78,6 +79,35 @@ input[name="slides"] {
 
 .controls {
   grid-area: controls;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.controls__bullet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
+
+.controls__bullet span {
+  width: 1rem;
+  height: 1rem;
+  background-color: #6ea3ca;
+  border: 2px solid #6ea3ca;
+  border-radius: 50%;
+}
+
+.controls__bullet:hover span {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.controls__bullet:active span {
+  background-color: #c6c6c6;
+  border-color: #c6c6c6;
 }
 
 #slide-1:checked ~ .images .images__item:nth-child(1) {
@@ -110,4 +140,20 @@ input[name="slides"] {
 
 #slide-4:checked ~ .titles .titles__item:nth-child(4) {
   visibility: visible;
+}
+
+#slide-1:checked ~ .controls .controls__bullet:nth-child(1) span {
+  background-color: transparent;
+}
+
+#slide-2:checked ~ .controls .controls__bullet:nth-child(2) span {
+  background-color: transparent;
+}
+
+#slide-3:checked ~ .controls .controls__bullet:nth-child(3) span {
+  background-color: transparent;
+}
+
+#slide-4:checked ~ .controls .controls__bullet:nth-child(4) span {
+  background-color: transparent;
 }
