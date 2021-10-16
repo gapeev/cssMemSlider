@@ -6,35 +6,36 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Слайдер мемов на CSS</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <main>
+  <main class="container">
     <input type="radio" id="slide-1" name="slides" checked>
     <input type="radio" id="slide-2" name="slides">
     <input type="radio" id="slide-3" name="slides">
     <input type="radio" id="slide-4" name="slides">
-    <ul>
-      <li><img src="assets/screenshots.webp" width="700" height="494"></li>
-      <li><img src="assets/matrix.webp" width="700" height="510"></li>
-      <li><img src="assets/db.webp" width="700" height="548"></li>
-      <li><img src="assets/sea.webp" width="640" height="480"></li>
+    <ul class="images">
+      <li class="images__item"><img src="assets/screenshots.webp" width="700" height="494"></li>
+      <li class="images__item"><img src="assets/matrix.webp" width="700" height="510"></li>
+      <li class="images__item"><img src="assets/db.webp" width="700" height="548"></li>
+      <li class="images__item"><img src="assets/sea.webp" width="640" height="480"></li>
     </ul>
-    <ul>
-      <li>
+    <ul class="titles">
+      <li class="titles__item">
         <p>Только не скриншоты...</p>
       </li>
-      <li>
+      <li class="titles__item">
         <p>Когда отключили интернет, а нужно писать код</p>
       </li>
-      <li>
+      <li class="titles__item">
         <p>Когда решил удалить поле из таблицы</p>
       </li>
-      <li>
+      <li class="titles__item">
         <p>Очень богатый программист</p>
       </li>
     </ul>
-    <div>
+    <div class="controls">
       <label for="slide-1">1</label>
       <label for="slide-2">2</label>
       <label for="slide-3">3</label>
